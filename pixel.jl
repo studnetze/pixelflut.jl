@@ -1,6 +1,4 @@
 using Retry
-using Images
-using Colors
 
 function gieveconnection()
    return connect("pixelflut.selfnet.de", 1234)

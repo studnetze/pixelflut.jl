@@ -1,3 +1,6 @@
+using Images
+using Colors
+
 function draw()
    if length(ARGS) > 1
       filename = ARGS[2]
