@@ -28,10 +28,9 @@ for _ in 1:50
    end
 end
 
-painter = ARGS[1]
-if isfile(painter)
+if length(ARGS) > 0 && isfile(ARGS[1])
    include(ARGS[1])
    draw()
 else
-   error("Command line argument is not a painter: $painter")
+   error("Command line argument is not a painter.")
 end
