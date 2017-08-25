@@ -27,5 +27,10 @@ for _ in 1:50
    end
 end
 
-include(ARGS[1])
-draw()
+painter = ARGS[1]
+if isfile(painter)
+   include(ARGS[1])
+   draw()
+else
+   error("Command line argument is not a painter: $painter")
+end
