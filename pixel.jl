@@ -1,6 +1,10 @@
 #!/usr/bin/env julia
 using Retry
 
+const linebuffer = 1000
+const connections = 50
+const pixel = Channel{String}(linebuffer)
+
 function gieveconnection()
    return connect("pixelflut.selfnet.de", 1234)
 end
@@ -20,9 +24,7 @@ function dowork()
    end
 end
 
-pixel = Channel{String}(1000)
-
-for _ in 1:50
+for _ in 1:connections
    @async begin
       dowork()
    end
