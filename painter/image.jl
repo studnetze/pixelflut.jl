@@ -5,7 +5,7 @@ function draw()
    if length(ARGS) > 1
       filename = ARGS[2]
    else
-      filename = "stunet.png"
+      filename = "images/stunet.png"
    end
    stunet = load(filename)
    while true
