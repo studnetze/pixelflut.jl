@@ -10,7 +10,8 @@ function dowork()
       data = take!(pixel)
       @repeat 10 try
          println(client, data)
-      catch
+      catch e
+         println("Resetting connection: $e")
          close(client)
          client = gieveconnection()
          @retry if true end
