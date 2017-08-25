@@ -4,7 +4,7 @@ function draw()
       centerX = rand(max:1920-max)
       centerY = rand(max:1080-max)
       size = rand(max-200:max)
-      println("Drawing pyramid at $centerX $centerY with r=$size")
+      info("Drawing pyramid at $centerX $centerY with r=$size")
       for r = 1:size
          res = r
          for i = 1:res

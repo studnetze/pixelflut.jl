@@ -5,7 +5,7 @@ function draw()
       centerY = rand(max:1080-max)
       size = rand(max-200:max)
       color = rand(1:0xffffff)
-      println("Drawing circle at $centerX $centerY with r=$size")
+      info("Drawing circle at $centerX $centerY with r=$size")
       for r = 1:size
          res = 2*r^1.2
          for i = 1:res

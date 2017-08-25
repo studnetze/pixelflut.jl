@@ -14,7 +14,7 @@ function draw()
       centerX = rand(1:(1920-sizeX))
       centerY = rand(1:(1080-sizeY))
       shift = rand(1:360)
-      println("Drawing $filename at $centerX $centerY")
+      info("Drawing $filename at $centerX $centerY")
       # Draw twice for more drawing power
       for _ = 1:2
          for x = shuffle(1:sizeX), y = shuffle(1:sizeY)
