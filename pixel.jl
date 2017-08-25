@@ -7,7 +7,6 @@ end
 function dowork()
    client = gieveconnection()
    while true
-      sent = 1
       data = take!(pixel)
       @repeat 10 try
          println(client, data)
@@ -19,7 +18,6 @@ function dowork()
    end
 end
 
-# 1920 1080
 pixel = Channel{String}(1000)
 
 for _ in 1:50
